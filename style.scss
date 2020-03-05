@@ -1,0 +1,505 @@
+    @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Signika:400,600,700&display=swap&subset=latin-ext');
+    // font-family: 'Inconsolata', monospace;
+    // font-family: 'Signika', sans-serif;
+    /*variables*/
+    
+    $color-one: #0097e6;
+    $color-two: #33d9b2;
+    $color-three: #ff5252;
+    $text-color-white: #fff;
+    $text-color-dark: #2c2c54;
+    $main-font: 'Inconsolata',
+    monospace;
+    $second-font:'Signika',
+    sans-serif;
+    $transition: all 1s;
+    /*Global*/
+    
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-size: 16px;
+        padding: 0;
+        margin: 0;
+        line-height: 1.7;
+        font-family: $main-font;
+        color: $text-color-dark;
+    }
+    
+    .container {
+        max-width: 1140px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0 auto;
+    }
+    
+    .section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    
+    .btn {
+        display: inline-block;
+        min-width: 160px;
+        margin: 24px auto 0 auto;
+        padding: 16px;
+        border-radius: 5px;
+        font-family: $main-font;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border-width: 2px;
+        border-style: solid;
+        background-position: 100% 0;
+        background-size: 300%;
+        transition: $transition;
+    }
+    
+    .btn-one {
+        border-color: $text-color-white;
+        color: $text-color-white;
+        background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+    }
+    
+    .btn-two {
+        border-color: $color-two;
+        color: $color-two;
+        background-image: linear-gradient(120deg, $color-two 50%, transparent 50%);
+    }
+    
+    .btn-three {
+        border-color: $color-three;
+        color: $color-three;
+        background-image: linear-gradient(60deg, $color-three 50%, transparent 50%);
+    }
+    
+    .btn-four {
+        border-color: $color-one;
+        color: $color-one;
+        background-image: linear-gradient(80deg, $color-one 50%, transparent 50%);
+    }
+    
+    .btn-five {
+        color: $color-one;
+        margin: 36px 0;
+        padding: 0;
+        text-align: center;
+        border: none;
+    }
+    
+    .btn:hover {
+        color: $text-color-white;
+        background-position: 0 100%;
+    }
+    
+    .btn-one:hover {
+        color: $color-one;
+    }
+    
+    .btn-two:hover {
+        color: $text-color-white
+    }
+    
+    .btn-three:hover {
+        color: $text-color-white
+    }
+    
+    .btn-four:hover {
+        color: $text-color-white
+    }
+    
+    .btn-five:hover {
+        color: red;
+    }
+    
+    h1.title {
+        font-size: 48px;
+        margin: 0 0 72px 0;
+    }
+    
+    h2.title-desc {
+        font-size: 24px;
+        margin: 0 0 12px 0;
+    }
+    /*menu*/
+    
+    nav {
+        background-color: $color-one;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .navigation ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        font-size: 0;
+    }
+    
+    .navigation ul li {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        font-size: 1rem;
+        margin: 36px;
+        transition: 0.5s linear;
+    }
+    
+    .navigation ul li:hover {
+        transform: scale(1.2);
+    }
+    
+    .navigation ul li a {
+        display: block;
+        text-decoration: none;
+        color: $text-color-white;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    .navigation ul li ul {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        margin-bottom: 12px;
+        li {
+            background-color: white;
+            display: block;
+            margin: 0;
+            transition: 0.5s linear;
+        }
+    }
+    
+    .navigation ul li:hover ul {
+        display: block;
+    }
+    
+    .navigation ul li ul li a:hover {
+        color: $color-two;
+        transform: scale(1.2);
+    }
+    
+    .navigation ul li ul li a {
+        display: block;
+        padding: 0 16px;
+        color: $color-one;
+    }
+    
+    // sekcja header
+    .splash {
+        background-color: $color-one;
+        height: 500px;
+        width: 100vw;
+        color: $text-color-white;
+    }
+    
+    .splash-inner {
+        margin: auto;
+        max-width: 70%;
+    }
+    
+    .page-title {
+        margin: 0;
+        font-size: 72px;
+        word-spacing: -24px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    
+    .page-subtitle {
+        margin: 24px 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .page-title span {
+        font-family: $second-font;
+    }
+    
+    // ourservices
+    .services {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    .service {
+        flex-basis: 33.33%;
+        flex: 1 1;
+        position: relative;
+        margin-left: 2%;
+        margin-right: 2%;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .service p:first-of-type {
+        font-weight: bold;
+    }
+    
+    p.number {
+        font-size: 144px;
+        line-height: 1;
+        color: $color-two;
+        opacity: 0.3;
+        position: absolute;
+        top: -45%;
+        left: 10%;
+        font-family: $second-font;
+        font-weight: 700;
+    }
+    
+    // galeria
+    .portfolio {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .wrapper-second {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .products {
+        flex: 0 0 50%;
+        min-height: 300px;
+        position: relative;
+        padding: 10px;
+        display: flex;
+    }
+    
+    .image {
+        position: relative;
+        background-image: url(https://www.personaltrainermarylebone.com/wp-content/uploads/2015/04/200x300-200x300.gif);
+        height: 100%;
+        max-width: 250px;
+        object-fit: cover;
+        flex: 1 0 50%;
+    }
+    
+    .image:after {
+        opacity: 0.3;
+        background-color: $color-two;
+        height: 100%;
+        content: "";
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 15px;
+        top: 15px;
+        z-index: -1;
+        transition: $transition;
+    }
+    
+    .image:hover:after {
+        top: 0;
+        left: 0;
+    }
+    
+    .description {
+        flex: 1 0 50%;
+        padding: 10px 10px;
+        width: calc(100% - 250px);
+        height: 100%;
+        margin-left: 15px;
+    }
+    
+    .description p:nth-of-type(2) {
+        font-weight: bold;
+    }
+    
+    // formularz+kontakt
+    form {
+        flex: 2 0 0;
+        background-color: $color-one;
+    }
+    
+    .contact {
+        flex: 1 0 0;
+        background-color: $color-one;
+        color: $text-color-white;
+        padding-top: 140px;
+        padding-left: 96px;
+    }
+    
+    .contact p:nth-child(1),
+    .contact p:nth-child(3) span,
+    .contact p:nth-last-of-type(2) {
+        font-weight: bold;
+    }
+    
+    input,
+    textarea {
+        display: block;
+        margin: 10px auto;
+        width: 50%;
+        padding: 10px;
+        background-color: $color-one;
+        color: $text-color-white;
+        font-family: $main-font;
+        border-style: none;
+        border-bottom: 2px solid white;
+    }
+    
+    input {
+        height: 40px;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        color: $text-color-white;
+        font-family: $main-font;
+    }
+    
+    h2.section-title-white {
+        color: $text-color-white;
+        padding-left: 50px;
+        font-size: 48px;
+    }
+    
+    form div {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    // w tym miejscu sprawdzam inna forme pisania selektorow - skrocona
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        div {
+            background-color: $color-three;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            transition: $transition;
+        }
+        ul {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            display: inline-block;
+        }
+        i {
+            font-size: 20px;
+            color: $text-color-white;
+            transition: $transition;
+        }
+        li {
+            text-align: center;
+            line-height: 45px;
+            display: inline-block;
+        }
+    }
+    
+    footer div:hover,
+    footer i:hover {
+        transform: scale(1.2);
+    }
+    
+    // for mobile phones
+    @media (max-width: 767px) {
+        .splash {
+            height: 380px;
+        }
+        .btn {
+            min-width: 80px;
+            margin: 14px auto 0 auto;
+            padding: 8px;
+        }
+        .section {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .wrapper,
+        .wrapper-second,
+        {
+            flex-direction: column;
+        }
+        .products {
+            flex-wrap: wrap;
+        }
+        .wrapper-second {
+            align-items: center;
+        }
+        .image {
+            max-width: 100%;
+            height: 150px;
+            flex: 100%;
+            margin-bottom: 50px;
+        }
+        .contact {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 0px;
+            margin-top: 50px;
+        }
+        .page-title {
+            font-size: 50px;
+        }
+        .navigation ul li {
+            margin: 15px;
+            font-size: 12px;
+        }
+        .portfolio,
+        .services {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 991px) {
+        .splash {
+            height: 400px;
+        }
+        .btn {
+            min-width: 120px;
+            margin: 17px auto 0 auto;
+            padding: 12px;
+        }
+        .section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .products {
+            flex-wrap: wrap;
+        }
+        .wrapper-second {
+            align-items: center;
+        }
+        .image {
+            max-width: 100%;
+            height: 150px;
+            flex: 100%;
+            margin-bottom: 50px;
+        }
+        .page-title {
+            font-size: 60px;
+        }
+        .portfolio,
+        .services {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .contact {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 0px
+        }
+    }
